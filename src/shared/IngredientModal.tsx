@@ -25,7 +25,7 @@ const IngredientModal = (props: IngredientModalType) => {
             width: 100,
             render: (image) => <Image
                 width={50}
-                src={"http://127.0.0.1:3000/public/img/" + image}
+                src={"http://34.70.197.4/api/public/img/" + image}
             />
         },
         {
