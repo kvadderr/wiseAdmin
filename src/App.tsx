@@ -57,7 +57,7 @@ function App() {
     const payload = {
       text: foodName
     }
-    const response = await axios.get("http://34.70.197.4/api/receip/generate/"+foodName);
+    const response = await axios.get("http://194.58.90.70:3000/receip/generate/"+foodName);
     setReceip(response.data);
     setOpen(true);
     setIsGenerateReceip(false);
@@ -65,11 +65,11 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://34.70.197.4/api/ingredient");
+      const response = await axios.get("http://194.58.90.70:3000/ingredient");
       setIngrediensList(response.data);
     }
     const fetchReceip = async () => {
-      const response = await axios.get("http://34.70.197.4/api/receip");
+      const response = await axios.get("http://194.58.90.70:3000/receip");
       setRecipeList(response.data);
     }
     fetchData();

@@ -126,7 +126,7 @@ const GenerateReceipModal = (props: GenerateReceipModalType) => {
     ];
 
     const propsImage: UploadProps = {
-        action: "http://34.70.197.4/api/ingredient/local",
+        action: "http://194.58.90.70:3000/ingredient/local",
         listType: "picture",
         headers: {
             authorization: 'authorization-text',
@@ -208,7 +208,7 @@ const GenerateReceipModal = (props: GenerateReceipModalType) => {
         const finalData = Object.assign(data, someData)
         console.log(finalData);
         props.addReceip(data)
-        await axios.post("http://34.70.197.4/api/receip", data);
+        await axios.post("http://194.58.90.70:3000/receip", data);
     };
 
     const handleCancel = () => {

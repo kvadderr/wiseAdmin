@@ -28,7 +28,7 @@ const IngredientCreateModal = (props: IngredientCreateModalType) => {
     }, [props.currentIngredient])
 
     const propsImage: UploadProps = {
-        action: "http://34.70.197.4/api/ingredient/local",
+        action: "http://194.58.90.70:3000/ingredient/local",
         listType: "picture",
         headers: {
             authorization: 'authorization-text',
@@ -53,7 +53,7 @@ const IngredientCreateModal = (props: IngredientCreateModalType) => {
                 image: imageName
             }
             props.currentIngredient?.image !== null ? props.updateIngredient(props.currentIngredient?.id, payload) : props.addIngredient(payload);
-            await axios.post("http://34.70.197.4/api/ingredient", payload);
+            await axios.post("http://194.58.90.70:3000/ingredient", payload);
             props.setOpen(false);
         } else {
             props.openNotificationWarning();
